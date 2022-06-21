@@ -27,6 +27,17 @@ class Home extends Component {
       todos: new_list,
     });
   };
+
+  // Implement the deleteTodo() function, first part of step 3 in the instructions
+  deleteTodo = (id) => {
+    const todos = this.state.todos.filter((todo) => {
+      return todo.id !== id;
+    });
+    this.setState({
+      todos: todos,
+    });
+  };
+  
   render() {
     return (
       <div className="Home">
